@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Coach;
+use App\Club;
 
-class CoachesController extends Controller
+class UsersController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class CoachesController extends Controller
      */
     public function index()
     {
-        $coaches = Coach::with(['clubs'])->get();
-        return view('coaches', compact('coaches'));
+        //
     }
 
     /**
@@ -35,12 +34,11 @@ class CoachesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($coach)
+    public function show($club)
     {
-        $requiredCoach = Coach::find($coach);
-
-        return view('coach', ['coach'=> $requiredCoach]);
-
+        $requiredClub = Club::find($club);
+        //$clubUsers = $requiredClub::with(['users'])->users();
+        return view('users', ['club'=> $requiredClub]);
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/about_us','AboutUsController@index')->name('about_us');
+
+Route::get('/clubs','ClubsController@index')->name('clubs');
+
+Route::get('/coaches','CoachesController@index')->name('coaches');
+
+Route::get('/coaches/{coach}','CoachesController@show')->name('coaches.show');
+
+Route::get('/clubs/{club}','ClubsController@show')->name('clubs.show');
+
+Route::get('/clubs/{club}/users', 'UsersController@show')->name('users.show');
