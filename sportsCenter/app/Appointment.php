@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Appointment extends Model
 {
+    protected $guarded = [];
+
     public function hall(){
         return $this->belongsTo('App\Hall');
     }
@@ -15,5 +17,5 @@ class Appointment extends Model
     public function user(){
         return $this->belongsTo('App\User');
     }
-    
+
 }

@@ -14,7 +14,7 @@ class ClubsController extends Controller
      */
     public function index()
     {
-        //$someClub = \App\Club::get();
+        //$someClub = \App\ClubCache::get();
         //$someClub->coaches()->attach([3,4]);
         //$someClub = Club::with('coaches')->first();
 

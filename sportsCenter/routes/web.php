@@ -37,3 +37,14 @@ Route::get('/coaches/{coach}','CoachesController@show')->name('coaches.show');
 Route::get('/clubs/{club}','ClubsController@show')->name('clubs.show');
 
 Route::get('/clubs/{club}/users', 'UsersController@show')->name('users.show');
+
+Route::post('/appointments', 'AppointmentsController@store')->name('appointments.store');
+
+Route::get('/appointments/create', 'AppointmentsController@index')->name('appointments');
+
+Route::get('/halls/{sport}', 'HallsController@show')->name('halls.show');
+
+//Route::get('/appointments/create/{date}', 'AppointmentsController@show')->name('appointments.show');
+
+Route::get('/appointments/create/{hall}/{date}', 'AppointmentsController@show')->name('appointments.show');
+
