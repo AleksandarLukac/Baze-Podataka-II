@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Court extends Model
 {
+    protected $guarded = [];
+    protected $fillable = ['kind'];
+
     public function hall(){
         return $this->belongsTo('App\Hall');
     }
