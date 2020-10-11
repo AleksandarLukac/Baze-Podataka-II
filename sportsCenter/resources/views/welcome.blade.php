@@ -88,7 +88,7 @@
                     <a href="{{ url('/about_us') }}">About us</a>
                     <a href="{{ url('/clubs') }}">Sport schools</a>
                     <a href="{{ url('/coaches') }}">Coaches</a>
-                    <a href="https://blog.laravel.com">Blog</a>
+                    <a href="{{ url('/appointments/create') }}">Rezervisi termin</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
