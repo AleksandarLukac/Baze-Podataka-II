@@ -44,7 +44,15 @@ Route::get('/appointments/create', 'AppointmentsController@index')->name('appoin
 
 Route::get('/halls/{sport}', 'HallsController@show')->name('halls.show');
 
-//Route::get('/appointments/create/{date}', 'AppointmentsController@show')->name('appointments.show');
+Route::post('/clubs', 'ClubsController@store')->name('clubs.store');
 
-Route::get('/appointments/create/{hall}/{date}', 'AppointmentsController@show')->name('appointments.show');
+Route::post('/appointments/create/termin', 'AppointmentsController@showAvailableAppointmentsForDateAndHall')->name('appointments.show2');
+
+Route::post('/ajax-store', 'AppointmentsController@store');
+
+Route::get('/user-appointments', 'AppointmentsController@showUserAppointments')->name('appointments.showUserAppointments');
+
+Route::delete('/ajax-delete', 'AppointmentsController@destroy')->name('appointments.destroy');
+
+Route::put('/user-appointments/update', 'AppointmentsController@update')->name('appointments.update');
 

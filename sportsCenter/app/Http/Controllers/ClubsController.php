@@ -32,7 +32,7 @@ class ClubsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request->input('sport');
     }
 
     /**

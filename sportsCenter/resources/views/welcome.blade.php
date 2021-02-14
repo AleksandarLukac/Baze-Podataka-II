@@ -88,7 +88,14 @@
                     <a href="{{ url('/about_us') }}">About us</a>
                     <a href="{{ url('/clubs') }}">Sport schools</a>
                     <a href="{{ url('/coaches') }}">Coaches</a>
+                    @if (Route::has('login'))
+                    @auth
                     <a href="{{ url('/appointments/create') }}">Rezervisi termin</a>
+
+                    @else
+                        <a href="{{ url('/home') }}">Rezervisi termin</a>
+                    @endauth
+                @endif
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
