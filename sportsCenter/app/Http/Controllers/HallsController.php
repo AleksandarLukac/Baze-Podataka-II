@@ -41,9 +41,7 @@ class HallsController extends Controller
         $fillteredHalls = $fillteredCourts->map(function($name,$key){
             return $name->hall_id;
         });
-        foreach(array_values($fillteredHalls->toArray()) as $hall_id){
-             echo "<h2>Dvorana: $hall_id</h2>";
-        }
+        dd($fillteredHalls->toArray());
 
     }
 

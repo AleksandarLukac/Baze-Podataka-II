@@ -37,9 +37,10 @@ class CoachesController extends Controller
      */
     public function show($coach)
     {
-        $requiredCoach = Coach::find($coach);
 
-        return view('coach', ['coach'=> $requiredCoach]);
+         $requiredCoach = Coach::find($coach);
+
+        return view('coach', ['coach'=> $requiredCoach]); 
 
     }
 

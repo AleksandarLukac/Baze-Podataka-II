@@ -3,10 +3,14 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Appointment extends Model
 {
+    //use SoftDeletes;
+
     protected $guarded = [];
+    protected $fillable = ['begining', 'end'];
 
     public function hall(){
         return $this->belongsTo('App\Hall');
