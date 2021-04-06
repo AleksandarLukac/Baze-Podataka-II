@@ -32,6 +32,7 @@
                     @endguest
 
                     <ul>
+                        <p>Treneri:</p>
                         @foreach ($club->coaches as $coach)
                             @if (Route::has('login'))
                                 @auth

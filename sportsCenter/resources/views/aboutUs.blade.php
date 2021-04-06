@@ -14,7 +14,13 @@
                         </div>
                     @endif
 
-                    {{ __("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.") }}
+                    {{ __("Sportsko-rekreativni centar Sportakos se može pohvaliti bogatom istorijom kroz dugi niz godina postojanja. Njegovi počeci su bili davne 1990. godine, te ga to čini jednim od najstarijih sportskih centara u gradu, iako je preživio mnoga iskušenja.
+                    Centar raspolaže velikim brojem sala, prilagođenih za razne vrste sportova, kako individualnih tako i timskih. Takođe ljubazan tim zaposlenih i stručnih ljudi našeg centra su uvijek na raspolaganju svim našim sportistima.
+                    Ako želite sa društvom da ispunite svoje vrijeme i odigrate par utakmica u odbojci ili možda košarci ili ipak želite da se usavršite u nekom određenom sportu, pravi smo izbor za vas.
+                    Veliki broj škola sporta i klubova nam je ukazalo povjerenje i na našim terenima uče mlade nade i možda buduće svjetske sportiste. Dođite i uvjerite se sami.
+                    Naša adresa je: ___________
+                    Kontakt telefon: ___________
+                    Živimo ispunjeno uz sport!") }}
                 </div>
             </div>
         </div>

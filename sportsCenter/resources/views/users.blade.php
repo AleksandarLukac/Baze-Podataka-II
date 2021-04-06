@@ -20,7 +20,8 @@
                         </tr>
                             @foreach ($club->users as $user)
                         <tr>
-                            <td>{{ $user['name'] }}</td>
+                            <td>{{ $user['name'] }}
+                            </td>
                         </tr>
 
                         @endforeach

@@ -20,9 +20,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
@@ -55,4 +53,3 @@ Route::get('/user-appointments', 'AppointmentsController@showUserAppointments')-
 Route::delete('/ajax-delete', 'AppointmentsController@destroy')->name('appointments.destroy');
 
 Route::put('/user-appointments/update', 'AppointmentsController@update')->name('appointments.update');
-

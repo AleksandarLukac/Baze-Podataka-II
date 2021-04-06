@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h1>Dobrodosli u Sportski centar Spartak !</h1>
+                <h1>Dobrodosli u Sportski centar Sportakos!</h1>
             </div>
         </div>
     </div>
