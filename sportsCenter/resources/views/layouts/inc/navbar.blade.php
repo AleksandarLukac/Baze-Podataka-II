@@ -8,19 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="/">Početna <span class="sr-only">(current)</span></a>
+          <a class="btn btn-outline-primary" href="/">Početna <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/about_us">O nama</a>
+          <a class="btn btn-outline-success" href="/about_us">O nama</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/clubs">Klubovi</a>
+            <a class="btn btn-outline-warning" href="/clubs">Klubovi</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/coaches">Treneri</a>
+            <a class="btn btn-outline-info" href="/coaches">Treneri</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="/appointments/create">Rezerviši termin</a>
+            <a class="btn btn-outline-danger" href="/appointments/create">Rezerviši termin</a>
         </li>
     </ul>
           <div class="top-right links">

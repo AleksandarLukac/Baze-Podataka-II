@@ -49,7 +49,7 @@
                 </div>
                 <br />
         <li class="nav-item">
-        <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="{{ url('/clubs')}}">Back</a>
+        <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="{{ url('/clubs')}}">Nazad</a>
         </li>
             </div>
         </div>

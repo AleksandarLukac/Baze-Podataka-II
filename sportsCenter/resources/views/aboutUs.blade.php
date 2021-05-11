@@ -2,17 +2,26 @@
 
 @section('content')
 <div class="container">
+    <p>
+
+
+
+    </p>
+</div>
+<div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('O sportskom centru Sportakos') }}</div>
 
                 <div class="card-body">
+
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
+
 
                     {{ __("Sportsko-rekreativni centar Sportakos se može pohvaliti bogatom istorijom kroz dugi niz godina postojanja. Njegovi počeci su bili davne 1990. godine, te ga to čini jednim od najstarijih sportskih centara u gradu, iako je preživio mnoga iskušenja.
                     Centar raspolaže velikim brojem sala, prilagođenih za razne vrste sportova, kako individualnih tako i timskih. Takođe ljubazan tim zaposlenih i stručnih ljudi našeg centra su uvijek na raspolaganju svim našim sportistima.
@@ -21,9 +30,18 @@
                     Naša adresa je: ___________
                     Kontakt telefon: ___________
                     Živimo ispunjeno uz sport!") }}
+
+                    <div class="col-md-4; text-align:center" >
+                        <img src="{{ URL::to('/') }}/frontend/slider/sportsCenterLogo.jpg" class="d-block w-100" alt="...">
+                        <p class="center">SPORTAKOS</p>
+
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
+
 </div>
+
 @endsection
