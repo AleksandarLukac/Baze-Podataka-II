@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Podatci o klubu:') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -16,7 +16,7 @@
                     {{ $club['name'] }}
                     <br />
                     <br />
-                    <p>Number of users in sport school: {{ $club['number_of_users'] }}</p>
+                    <p>Broj korisnika škole sporta: {{ $club['number_of_users'] }}</p>
                     <br />
                     <br />
 
@@ -48,7 +48,9 @@
 
                 </div>
                 <br />
-        <a href="{{ url('/clubs')}}">Back</a>
+        <li class="nav-item">
+        <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="{{ url('/clubs')}}">Back</a>
+        </li>
             </div>
         </div>
     </div>
