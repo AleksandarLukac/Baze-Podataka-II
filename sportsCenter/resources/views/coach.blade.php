@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Podatci o treneru:') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -21,9 +21,10 @@
                     {{$coach->domain }}
                 </div>
                 <br />
-                    <a href="{{ url('/home')}}">Back on home page</a>
+                <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/coaches')}}">Prikaži sve trenere iz sportskog centra</a></div>
+
                     <br />
-                    <a href="{{ url('/coaches')}}">Show all coaches in center</a>
+                    <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/')}}">Nazad na početnu stranicu</a></div>
 
             </div>
         </div>

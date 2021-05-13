@@ -48,9 +48,7 @@
 
                 </div>
                 <br />
-        <li class="nav-item">
-        <a class="btn btn-outline-success my-2 my-sm-0" type="submit" href="{{ url('/clubs')}}">Nazad</a>
-        </li>
+            <div class="col-md-6"><a class="btn btn-primary" type="submit" href="{{ url('/clubs')}}">Nazad</a></div>
             </div>
         </div>
     </div>
