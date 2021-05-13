@@ -14,7 +14,7 @@
             <div class="card">
                 <div class="card-header">{{ __('O sportskom centru Sportakos') }}</div>
 
-                <div class="card-body">
+                <div class="card-body text-primary">
 
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

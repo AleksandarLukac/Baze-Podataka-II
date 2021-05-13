@@ -41,7 +41,7 @@
                   <a class="btn btn-outline-success" href="/about_us">O nama</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-outline-warning" href="/clubs">Klubovi</a>
+                    <a class="btn btn-outline-warning" href="/clubs">Škole sporta</a>
                 </li>
                 <li class="nav-item">
                     <a class="btn btn-outline-info" href="/coaches">Treneri</a>

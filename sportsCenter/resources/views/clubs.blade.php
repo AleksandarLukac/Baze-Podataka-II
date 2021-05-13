@@ -20,6 +20,7 @@
     </tbody>
   </table>
 </div>
+{{--
 <div class="center">
     <div class="col-md-12">
         <br />
@@ -37,5 +38,5 @@
             @endforeach
         </table>
     </div>
-</div>
+</div>--}}
 @endsection

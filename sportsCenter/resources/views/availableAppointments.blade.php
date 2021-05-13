@@ -7,10 +7,16 @@
         <div class="col-md-8">
             <form method="POST" action="{{ url('appointments/create/termin/'.Auth::user()->id)}}">
                 {{ csrf_field() }}
-            <div class="card">
+            <div class="card mb-3 text-dark bg-warning">
                 <div class="card-header">{{ __('Rezervacija termina za salu:') }}</div>
+                <img src="{{ URL::to('/') }}/frontend/slider/termin.png" width="625" height="300" class="card-img-top" alt="...">
 
-                <div class="card-body">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="{{ URL::to('/') }}/frontend/slider/termini.jpg" width="250" height="900" alt="...">
+                    </div>
+                <div class="col-md-8">
+                <div class="card-body ">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -50,9 +56,10 @@
                     </ul>
 
                 </div>
+                <h5>Izaberite salu:</h5>
                 <div class="col-md-6">
                     <div class="form-group row">
-                        <label for="sport" class="col-md-4 col-form-label text-md-right">{{ __('Choose hall:') }}</label>
+                        <label for="sport" class="col-md-4 col-form-label text-md-right">{{ __('Sala:') }}</label>
 
                         <div class="col-md-6 dropdown_container">
                                    <select name="hall" id="hall" class="selectpicker" data-style="select-with-transition" title="Select one of the available halls">
@@ -80,7 +87,9 @@
                 <input type="hidden" id="hidden" class="sport" value="{{ $sportDate }}">
                 <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/user-appointments')}}">Tvoji zakazani termini</a></div>
                 <p>                    </p>
-                <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/appointments/create')}}">Nazad</a></div>
+                <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/home')}}">Nazad</a></div>
+                </div>
+                </div>
 
             </div>
             </form>
