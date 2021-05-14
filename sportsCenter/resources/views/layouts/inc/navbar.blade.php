@@ -8,19 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="btn btn-outline-primary" href="/">Početna <span class="sr-only">(current)</span></a>
+          <a class="btn btn-outline-primary" href="/" style="margin:5px">Početna <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="btn btn-outline-success" href="/about_us">O nama</a>
+          <a class="btn btn-outline-success" href="/about_us" style="margin:5px">O nama</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-outline-warning" href="/clubs">Škole sporta</a>
+            <a class="btn btn-outline-warning" href="/clubs" style="margin:5px">Škole sporta</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-outline-info" href="/coaches">Treneri</a>
+            <a class="btn btn-outline-info" href="/coaches" style="margin:5px">Treneri</a>
         </li>
         <li class="nav-item">
-            <a class="btn btn-outline-danger" href="/appointments/create">Rezerviši termin</a>
+            <a class="btn btn-outline-danger" href="/appointments/create" style="margin:5px">Rezerviši termin</a>
         </li>
     </ul>
           <div class="top-right links">
@@ -29,11 +29,11 @@
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
-                        <a class="btn btn-outline-success my-2 my-sm-0" type="submit" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                        <a class="btn btn-outline-success my-2 my-sm-0" type="submit" class="nav-link" href="{{ route('login') }}" style="margin:5px">{{ __('Login') }}</a>
                     </li>
                     @if (Route::has('register'))
                         <li class="nav-item">
-                            <a class="btn btn-outline-success my-2 my-sm-0" type="submit" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="btn btn-outline-success my-2 my-sm-0" type="submit" class="nav-link" href="{{ route('register') }}" style="margin:5px">{{ __('Register') }}</a>
                         </li>
                     @endif
                 @else
@@ -43,7 +43,7 @@
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ url('/user-appointments')}}">{{ __('Your appointments') }}</a>
+                            <a class="dropdown-item" href="{{ url('/user-appointments')}}">{{ __('Tvoji zakazani termini') }}</a>
 
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                onclick="event.preventDefault();

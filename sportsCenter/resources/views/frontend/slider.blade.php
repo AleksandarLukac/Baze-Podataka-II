@@ -6,42 +6,42 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="{{ URL::to('/') }}/frontend/slider/sportsCenterLogo.jpg" class="d-block w-100" alt="...">
+        <img src="{{ URL::to('/') }}/frontend/slider/sportsCenterLogo.jpg" class="d-block w-100" height="675" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>First slide label</h5>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </div>
       </div>
     <div class="carousel-item">
-      <img src="{{ URL::to('/') }}/frontend/slider/Fina puno sjedista sala.jpg" class="d-block w-100" alt="...">
+      <img src="{{ URL::to('/') }}/frontend/slider/Fina puno sjedista sala.jpg" class="d-block w-100" height="675" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Košarkaski teren 1.</h5>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{ URL::to('/') }}/frontend/slider/Kosarka sala.jpg" class="d-block w-100" alt="...">
+        <img src="{{ URL::to('/') }}/frontend/slider/Kosarka sala.jpg" class="d-block w-100" height="675" alt="...">
         <div class="carousel-caption d-none d-md-block">
           <h5>Košarkaski teren 2.</h5>
           <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="{{ URL::to('/') }}/frontend/slider/Odbojka sala.jpg" class="d-block w-100" alt="...">
+        <img src="{{ URL::to('/') }}/frontend/slider/Odbojka sala.jpg" class="d-block w-100" height="675" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Odbojkaški teren</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
        </div>
        <div class="carousel-item">
-        <img src="{{ URL::to('/') }}/frontend/slider/Plava sjedista sala.jpg" class="d-block w-100" alt="...">
+        <img src="{{ URL::to('/') }}/frontend/slider/Plava sjedista sala.jpg" class="d-block w-100" height="675" alt="...">
           <div class="carousel-caption d-none d-md-block">
             <h5>Višenamjenski teren 1.</h5>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
         </div>
         <div class="carousel-item">
-            <img src="{{ URL::to('/') }}/frontend/slider/Velika parket sala.jpg" class="d-block w-100" alt="...">
+            <img src="{{ URL::to('/') }}/frontend/slider/Velika parket sala.jpg" class="d-block w-100" height="675" alt="...">
               <div class="carousel-caption d-none d-md-block">
                 <h5>Višenamjenski teren 2.</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
