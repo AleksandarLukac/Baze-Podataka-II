@@ -31,7 +31,7 @@
                 <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/coaches')}}">Prikaži sve trenere iz sportskog centra</a></div>
 
                  <br />
-                <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/')}}">Nazad</a></div>
+                <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/coaches')}}">Nazad</a></div>
 
             </div>
 
