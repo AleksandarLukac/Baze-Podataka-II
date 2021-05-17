@@ -2,16 +2,12 @@
 
 @section('content')
 <div class="container">
-    <p>
 
-
-
-    </p>
 </div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card bg-warning">
                 <div class="card-header">{{ __('O sportskom centru Sportakos') }}</div>
 
                 <div class="card-body text-primary">
@@ -27,14 +23,13 @@
                     Centar raspolaže velikim brojem sala, prilagođenih za razne vrste sportova, kako individualnih tako i timskih. Takođe ljubazan tim zaposlenih i stručnih ljudi našeg centra su uvijek na raspolaganju svim našim sportistima.
                     Ako želite sa društvom da ispunite svoje vrijeme i odigrate par utakmica u odbojci ili možda košarci ili ipak želite da se usavršite u nekom određenom sportu, pravi smo izbor za vas.
                     Veliki broj škola sporta i klubova nam je ukazalo povjerenje i na našim terenima uče mlade nade i možda buduće svjetske sportiste. Dođite i uvjerite se sami.
-                    Naša adresa je: ___________
-                    Kontakt telefon: ___________
+                    Naša adresa je: Nikole Pašića 62
+                    Kontakt telefon: +387 66 022 389
                     Živimo ispunjeno uz sport!") }}
 
                     <div class="col-md-4; text-align:center" >
-                        <img src="{{ URL::to('/') }}/frontend/slider/sportsCenterLogo.jpg" class="d-block w-100" alt="...">
+                        <img src="{{ URL::to('/') }}/frontend/slider/sportsCenterLogo.jpg" class="d-block w-100" height="400"  alt="...">
                         <p class="center">SPORTAKOS</p>
-
                     </div>
                 </div>
             </div>

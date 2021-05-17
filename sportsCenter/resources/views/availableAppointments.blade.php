@@ -4,26 +4,26 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 text-end">
             <form method="POST" action="{{ url('appointments/create/termin/'.Auth::user()->id)}}">
                 {{ csrf_field() }}
-            <div class="card mb-3 text-dark bg-warning">
+            <div class="card mb-3 text-dark bg-warning ">
                 <div class="card-header">{{ __('Rezervacija termina za salu:') }}</div>
                 <img src="{{ URL::to('/') }}/frontend/slider/termin.png" width="625" height="300" class="card-img-top" alt="...">
 
                 <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="{{ URL::to('/') }}/frontend/slider/termini.jpg" width="250" height="900" alt="...">
+                      {{--<img src="{{ URL::to('/') }}/frontend/slider/termini.jpg"  alt="...">--}}
                     </div>
                 <div class="col-md-8">
-                <div class="card-body ">
+                {{--<div class="card-body ">--}}
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
-                    <p>Odaberite vrijeme za rezervaciju sale!</p>
-                    <p>Radno vrijeme: 08:00 - 23:00</p>
+                    <h5>Odaberite vrijeme za rezervaciju sale!</h5>
+                    <h5>Radno vrijeme: 08:00 - 23:00</h5>
                     <br />
 
                    {{--  @guest
@@ -55,7 +55,7 @@
                         @endforeach
                     </ul>
 
-                </div>
+                {{--</div>--}}
                 <h5>Izaberite salu:</h5>
                 <div class="col-md-6">
                     <div class="form-group row">
@@ -71,12 +71,13 @@
                     </div>
                     <p>Izaberite početak termina: </p>
                     <input id="begining" type="time" class="form-control" name = "begining" required autocomplete="current-password">
+                    <br/>
                     <p>Izaberite kraj termina: </p>
                     <input id="end" type="time" class="form-control" name = "end" required autocomplete="current-password">
 
                 </div>
                 <p>                    </p>
-                <div class="col-md-6">
+                <div class="col-md-6 text-align: center">
                     <div class="alert alert-success" style="display: none">
                     </div>
 

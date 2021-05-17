@@ -1,20 +1,20 @@
 @extends('layouts.frontend')
 
 @section('title')
-    Home
+    Sportakos
 @endsection
 
 @section('content')
 
     @include('frontend.slider')
 
-    <div class="container">
+    {{--<div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h1>Dobrodosli u Sportski centar Sportakos!</h1>
+                <h2>Dobrodosli u Sportski centar Sportakos!</h2>
             </div>
         </div>
-    </div>
+    </div>--}}
 
 
 @endsection

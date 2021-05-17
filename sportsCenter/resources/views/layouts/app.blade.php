@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-        body {background-image: url("/frontend/slider/sportsCenterLogo.jpg");
-        background-size: cover;}
+        body {
+            background: url("/frontend/slider/sportsCenterLogo.jpg") no-repeat center fixed;
+            width: 100%;
+            height: 300px;
+            background-size: 100% 100%;
+
+        }
+
     </style>
 
     <!-- CSRF Token -->
