@@ -286,16 +286,16 @@ class AppointmentsController extends Controller
         $unavailableApp = $appoint->availableApp($sport, $date);
 
         if($request->begining > $request->end){
-            $success = "The begining of the termin can not be after the end of the termin.";
+            $success = "Početak termina ne može biti poslije kraja termina. Izaberite ponovo!";
 
         }
         elseif(!$appoint->overlap($chosenHall, $beginingOfAppointment, $endOfAppointment, $unavailableApp))
         {
-            $success = "You are trying to make appointment that overlaps already existing appointment or appointment that is not in working time.";
+            $success = "Pokušavate rezervisati termin koji se preklapa sa već postojećim terminom ili ste unijeli termin koji ne pripada radnom vremenu sportskog centra. Pogledajte prikazane slobodne termine za salu koju ste odabrali.";
         }
         elseif($durationMin < 30)
         {
-            $success = "The appointment can not be shorter than 30 min.";
+            $success = "Rezervacija ne može biti kraća od 30 min.";
         }
     else{
             $newApp = new \App\Appointment;
@@ -307,7 +307,7 @@ class AppointmentsController extends Controller
             $newApp->end = $endOfAppointment;
             $newApp->save();
 
-            $success = "Your reservation was successfully made.";
+            $success = "Uspjesno ste rezervisali termin.";
          }
          return response()->json(['success'=>$success]);
 }
@@ -385,27 +385,27 @@ public function update(Request $request)
     $availableAppoint = $appoint->editAvailable($court->kind, $date, $oldBegining);
 
         if($request->input('editbeg') > $request->input('editend')){
-            $success = "The begining of the termin can not be after the end of the termin.";
+            $success = "Početak termina ne može biti poslije kraja termina. Izaberite ponovo!";
 
         }
         elseif(!$appoint->overlap($hall, $beginingOfAppointment, $endOfAppointment, $availableAppoint))
         {
-            $success = "You are trying to make appointment that overlaps already existing appointment or appointment that is not in working time.
-            Try one of these available appointments: ";
+            $success = "Pokušavate rezervisati termin koji se preklapa sa već postojećim terminom ili ste unijeli termin koji ne pripada radnom vremenu sportskog centra.
+            Pokušajte jedan od ovih slobodnih termina: ";
             foreach ($availableAppoint[$hall] as $interval) {
                 $success = $success.explode(" ",$interval[0])[1]."-".explode(" ",$interval[1])[1]."    ";
             }
         }
         elseif($durationMin < 30)
         {
-            $success = "The appointment can not be shorter than 30 min.";
+            $success = "Rezervacija ne može biti kraća od 30 min.";
         }
     else{
             $appointment->begining = $request->input('editbeg');
             $appointment->end = $request->input('editend');
 
             $appointment->save();
-            $success = "Your reservation was successfully made.";
+            $success = "Uspješno ste izvršili izmjenu termina.";
          }
 
        return response()->json(['success'=>$success]);

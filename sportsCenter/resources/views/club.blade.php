@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card text-black bg-warning mb-3">
-                <div class="card-header">{{ __('Podatci o školi sporta:') }}</div>
+                <div class="card-header">{{ __('Podaci o školi sporta:') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -26,7 +26,7 @@
                         @foreach ($club->coaches as $coach)
                             @if(Auth::user()->email == $coach['email'])
                                 {{--<p><a href="{{ url('/clubs/'.$club['id'].'/users') }}">Pogledaj clanove skole sporta</a></p>--}}
-                                <div class="col-md-6"><a class="btn btn-primary" type="submit" href="{{ url('/clubs/'.$club['id'].'/users') }}">Pogledaj članove skole sporta</a></div>
+                                <div class="col-md-6"><a class="btn btn-primary" type="submit" href="{{ url('/clubs/'.$club['id'].'/users') }}">Pogledaj članove škole sporta</a></div>
                             @endif
                         @endforeach
 

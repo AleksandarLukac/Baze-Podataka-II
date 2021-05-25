@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card text-dark bg-warning mb-3">
-                <div class="card-header">{{ __('Podatci o treneru:') }}</div>
+                <div class="card-header">{{ __('Podaci o treneru:') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))

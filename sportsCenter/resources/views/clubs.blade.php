@@ -8,7 +8,7 @@
 <table class="table table-bordered border-primary">
     <thead class="center">
       <tr>
-        <th scope="col">IME SKOLE</th>
+        <th scope="col">IME ŠKOLE</th>
       </tr>
     </thead>
     <tbody>
