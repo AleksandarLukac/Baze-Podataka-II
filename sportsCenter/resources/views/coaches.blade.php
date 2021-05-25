@@ -1,16 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row">
+<div class="container">
     <div class="col-md-12">
         <br />
-        <h3>Coaches</h3>
+        <h3>Treneri:</h3>
         <br />
-        <table class="table table-border">
+        <table class="table table-dark table-sm">
             <tr>
-                <th>Name</th>
-                <th>Domain</th>
-                <th>Sport schools</th>
+                <th>Ime trenera</th>
+                <th>Sport</th>
+                <th>Škola sporta</th>
             </tr>
             @foreach ($coaches as $coach)
             <tr>

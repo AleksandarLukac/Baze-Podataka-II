@@ -13,6 +13,7 @@
         <style>
             html, body {
                 background-color: #fff;
+                background-image: "{{ URL::to('/') }}/frontend/slider/sportsCenterLogo.jpg";
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -81,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel moj
                 </div>
 
                 <div class="links">

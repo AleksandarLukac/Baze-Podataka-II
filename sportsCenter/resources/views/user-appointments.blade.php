@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row">
+<div class="center">
     <div class="col-md-12">
         <br />
-        <h3>Your appointments</h3>
+        <h3>Tvoji termini</h3>
         <br />
         <table class="table table-border">
             <tr>
-                <th>Hall</th>
-                <th>Court</th>
-                <th>Date</th>
-                <th>Begining</th>
-                <th>End</th>
+                <th>Sala</th>
+                <th>Teren</th>
+                <th>Datum</th>
+                <th>Početak</th>
+                <th>Kraj</th>
 
                 <th></th>
             </tr>
@@ -33,21 +33,23 @@
                 <td>{{ $app->end }}</td>
                 {{-- <td>{{ $app->deleted }}</td> --}}
                 <td>
-                    <button type="button" class="btn btn-primary editbtn">Edit</button>
-                    <button type="button" class="btn btn-danger deletebtn">Delete</button>
+                    <button type="button" class="btn btn-primary editbtn">Izmjeni</button>
+                    <button type="button" class="btn btn-danger deletebtn">Obriši</button>
                 </td>
             </tr>
 
             @endforeach
         </table>
     </div>
+    <p>                    </p>
+                <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/appointments/create')}}">Nazad</a></div>
 </div>
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit termin</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Izmjeni termin</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -60,17 +62,17 @@
           <input type="hidden" name="hiddenbeg" id="hiddenbeg">
           <input type="hidden" name="hiddenend" id="hiddenend">
           <div class="form-group">
-            <label for="recipient-name" class="col-form-label">Choose begining of the termin:</label>
+            <label for="recipient-name" class="col-form-label">Izaberi početak termina:</label>
             <input type="text" class="form-control" id="editbeg" name="editbeg">
           </div>
           <div class="form-group">
-            <label for="message-text" class="col-form-label">Choose end of the termin:</label>
+            <label for="message-text" class="col-form-label">Izaberi kraj termina:</label>
             <input type="text" class="form-control" id="editend" name="editend">
           </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zatvori</button>
+        <button type="submit" class="btn btn-primary">Spasi</button>
       </div>
       </form>
     </div>
@@ -102,8 +104,8 @@
 
            // alert(date);
              swal({
-                title: "Are you sure?",
-                text: "Once deleted, you will not be able to recover this appointment!",
+                title: "Da li ste sigurni?",
+                text: "Kada izbrišete, nećete moći vratiti ovaj termin!",
                 icon: "warning",
                 buttons: true,
                 dangerMode: true,

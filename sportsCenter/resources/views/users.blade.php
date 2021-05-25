@@ -4,8 +4,8 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">{{ __('Učlanjeni u školu sporta:') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,13 +14,16 @@
                         </div>
                     @endif
 
-                    <table class="table table-border">
-                        <tr>
-                            <th>Clanovi skole sporta {{ $club['name'] }} </th>
-                        </tr>
+                    <tr>
+                        <th>{{ $club['name'] }} </th>
+                    </tr>
+
+                    <table class="table table-border text-center">
+
                             @foreach ($club->users as $user)
                         <tr>
-                            <td>{{ $user['name'] }}</td>
+                            <td>{{ $user['name'] }}
+                            </td>
                         </tr>
 
                         @endforeach

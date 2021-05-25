@@ -4,20 +4,26 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-8 text-end">
             <form method="POST" action="{{ url('appointments/create/termin/'.Auth::user()->id)}}">
                 {{ csrf_field() }}
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+            <div class="card mb-3 text-dark bg-warning ">
+                <div class="card-header">{{ __('Rezervacija termina za salu:') }}</div>
+                <img src="{{ URL::to('/') }}/frontend/slider/termin.png" width="625" height="300" class="card-img-top" alt="...">
 
-                <div class="card-body">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                      {{--<img src="{{ URL::to('/') }}/frontend/slider/termini.jpg"  alt="...">--}}
+                    </div>
+                <div class="col-md-8">
+                {{--<div class="card-body ">--}}
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
                     @endif
-                    <p>Select time of the appointment!</p>
-                    <p>Time of working: 08:00 - 23:00</p>
+                    <h5>Odaberite vrijeme za rezervaciju sale!</h5>
+                    <h5>Radno vrijeme: 08:00 - 23:00</h5>
                     <br />
 
                    {{--  @guest
@@ -33,15 +39,15 @@
 
                     <ul>
                         @foreach ($availableApp as $key=>$value)
-                                    <td><li>Hall {{ $key }}</li></td>
+                                    <td><li>Sala {{ $key }}</li></td>
                                     @foreach ($capacityOfHalls as $capacityOfHall)
                                         @if ($key == key($capacityOfHall))
                                             @foreach ($capacityOfHall as $jip)
-                                                <p>Capacity of this hall is: {{ $jip[0] }}</p>
+                                                <p>Kapacitet ove sale je: {{ $jip[0] }}</p>
                                             @endforeach
                                         @endif
                                     @endforeach
-                                    <p>Available appointments for this hall: </p>
+                                    <p>Dostupni termini za ovu salu: </p>
                                     @foreach ($value as $interval)
 
                                             <p>{{ explode(' ',$interval[0])[1] }} - {{ explode(' ', $interval[1])[1] }}</p>
@@ -49,10 +55,11 @@
                         @endforeach
                     </ul>
 
-                </div>
+                {{--</div>--}}
+                <h5>Izaberite salu:</h5>
                 <div class="col-md-6">
                     <div class="form-group row">
-                        <label for="sport" class="col-md-4 col-form-label text-md-right">{{ __('Choose hall:') }}</label>
+                        <label for="sport" class="col-md-4 col-form-label text-md-right">{{ __('Sala:') }}</label>
 
                         <div class="col-md-6 dropdown_container">
                                    <select name="hall" id="hall" class="selectpicker" data-style="select-with-transition" title="Select one of the available halls">
@@ -62,23 +69,29 @@
                                 </select>
                         </div>
                     </div>
-                    <p>Choose begining of termin: </p>
+                    <p>Izaberite početak termina: </p>
                     <input id="begining" type="time" class="form-control" name = "begining" required autocomplete="current-password">
-                    <p>Choose end of termin: </p>
+                    <br/>
+                    <p>Izaberite kraj termina: </p>
                     <input id="end" type="time" class="form-control" name = "end" required autocomplete="current-password">
 
                 </div>
-                <div class="col-md-6">
+                <p>                    </p>
+                <div class="col-md-6 text-align: center">
                     <div class="alert alert-success" style="display: none">
                     </div>
 
 {{--                      <a href="{{ url('appointments/create/'.Auth::user()->id)}}" class="btn btn-success w-100">Rezervisi</a>
- --}}                    <input type="submit" value="Rezervisi" id="ajax-submit">
+ --}}                    <input class="btn btn-primary" type="submit" value="Rezervisi" id="ajax-submit">
                 </div>
                 <br />
                 <input type="hidden" id="hidden" class="sport" value="{{ $sportDate }}">
-        <a href="{{ url('/home')}}">Back</a>
-        <a href="{{ url('/user-appointments')}}">Your appointments</a>
+                <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/user-appointments')}}">Tvoji zakazani termini</a></div>
+                <p>                    </p>
+                <div class="col-md-6"><a class="btn btn-primary" href="{{ url('/home')}}">Nazad</a></div>
+                </div>
+                </div>
+
             </div>
             </form>
 </div>

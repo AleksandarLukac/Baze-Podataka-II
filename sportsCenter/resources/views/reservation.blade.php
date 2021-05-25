@@ -31,9 +31,23 @@
                             </div>
                             <div class="form-group row mb-0">
                                 <div class="col-md-8 offset-md-4">
-                                    <button type="submit" class="btn btn-primary">
+
+                                        @if (Route::has('login'))
+                                         @auth
+                                        <button type="submit" class="btn btn-primary">
                                         {{ __('Next') }}
-                                    </button>
+                                        </button>
+
+                                        @else
+                                        <form action="http://127.0.0.1:8000//login" method="get" >
+
+                                        <button onclick="location.href='http://127.0.0.1:8000/login'" type="button" class="btn btn-primary">
+                                            Niste se ulogovali u svoj nalog!</button>
+                                        </form>
+                                        @endauth
+                                        @endif
+
+
                                 </div>
                             </div>
                         </form>
